@@ -96,7 +96,7 @@ int main() {
 	MyString str2(buffer);
 
 	while (true) {
-		cin.getline(buffer, 100);//cin,cin.getline È¥¿ë½Ã ¹öÆÛ¿¡ °³Çà¹®ÀÚÀÜÀç°¡´É¼º ÀÖÀ½À¸·Î È¥¿ë½Ã ÁÖÀÇ!!
+		cin.getline(buffer, 100);//cin,cin.getline í˜¼ìš©ì‹œ ë²„í¼ì— ê°œí–‰ë¬¸ìì”ì¬ê°€ëŠ¥ì„± ìˆìŒìœ¼ë¡œ í˜¼ìš©ì‹œ ì£¼ì˜!!
 		if (buffer[0] == '0') {
 			cout << "Program exit!";
 			break;
