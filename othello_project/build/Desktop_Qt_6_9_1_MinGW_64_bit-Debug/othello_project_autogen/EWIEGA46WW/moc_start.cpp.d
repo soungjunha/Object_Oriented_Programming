@@ -151,7 +151,9 @@ C:/Users/jerom/Documents/othello_project/build/Desktop_Qt_6_9_1_MinGW_64_bit-Deb
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \

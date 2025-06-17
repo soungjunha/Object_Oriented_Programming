@@ -25,10 +25,10 @@ public:
     {
         if (setting_window->objectName().isEmpty())
             setting_window->setObjectName("setting_window");
-        setting_window->resize(200, 300);
+        setting_window->resize(1200, 675);
         label = new QLabel(setting_window);
         label->setObjectName("label");
-        label->setGeometry(QRect(50, 100, 101, 101));
+        label->setGeometry(QRect(20, 10, 71, 51));
         QFont font;
         font.setPointSize(15);
         label->setFont(font);
@@ -41,7 +41,7 @@ public:
     void retranslateUi(QWidget *setting_window)
     {
         setting_window->setWindowTitle(QCoreApplication::translate("setting_window", "Form", nullptr));
-        label->setText(QCoreApplication::translate("setting_window", "50", nullptr));
+        label->setText(QCoreApplication::translate("setting_window", "setting", nullptr));
     } // retranslateUi
 
 };

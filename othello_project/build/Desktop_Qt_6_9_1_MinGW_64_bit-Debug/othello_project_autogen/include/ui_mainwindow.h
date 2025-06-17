@@ -17,7 +17,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 #include "game_window.h"
-#include "setting_window.h"
+#include "replay_window.h"
 #include "start.h"
 
 QT_BEGIN_NAMESPACE
@@ -29,7 +29,8 @@ public:
     QStackedWidget *stackedWidget;
     start *page;
     game_window *page_2;
-    setting_window *page_3;
+    QWidget *page_3;
+    replay_window *page_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,7 +38,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1129, 693);
+        MainWindow->resize(900, 675);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
@@ -49,13 +50,16 @@ public:
         page_2 = new game_window();
         page_2->setObjectName("page_2");
         stackedWidget->addWidget(page_2);
-        page_3 = new setting_window();
+        page_3 = new QWidget();
         page_3->setObjectName("page_3");
         stackedWidget->addWidget(page_3);
+        page_4 = new replay_window();
+        page_4->setObjectName("page_4");
+        stackedWidget->addWidget(page_4);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1129, 22));
+        menubar->setGeometry(QRect(0, 0, 900, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");

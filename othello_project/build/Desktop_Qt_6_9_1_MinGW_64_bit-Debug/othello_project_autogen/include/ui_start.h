@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -20,35 +21,62 @@ QT_BEGIN_NAMESPACE
 class Ui_start
 {
 public:
-    QPushButton *replay;
-    QPushButton *CONTINUE;
-    QPushButton *quit;
     QLabel *label;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
     QPushButton *new_game;
+    QPushButton *continue_game;
+    QPushButton *load_game;
+    QPushButton *replay;
+    QPushButton *quit;
 
     void setupUi(QWidget *start)
     {
         if (start->objectName().isEmpty())
             start->setObjectName("start");
-        start->resize(1200, 675);
-        replay = new QPushButton(start);
-        replay->setObjectName("replay");
-        replay->setGeometry(QRect(580, 350, 111, 41));
-        CONTINUE = new QPushButton(start);
-        CONTINUE->setObjectName("CONTINUE");
-        CONTINUE->setGeometry(QRect(430, 350, 111, 41));
-        quit = new QPushButton(start);
-        quit->setObjectName("quit");
-        quit->setGeometry(QRect(730, 350, 111, 41));
+        start->resize(900, 675);
         label = new QLabel(start);
         label->setObjectName("label");
-        label->setGeometry(QRect(510, 190, 121, 41));
+        label->setGeometry(QRect(390, 220, 121, 41));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);
-        new_game = new QPushButton(start);
+        horizontalLayoutWidget = new QWidget(start);
+        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
+        horizontalLayoutWidget->setGeometry(QRect(150, 310, 581, 91));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        new_game = new QPushButton(horizontalLayoutWidget);
         new_game->setObjectName("new_game");
-        new_game->setGeometry(QRect(290, 350, 111, 41));
+        new_game->setMinimumSize(QSize(111, 41));
+
+        horizontalLayout->addWidget(new_game);
+
+        continue_game = new QPushButton(horizontalLayoutWidget);
+        continue_game->setObjectName("continue_game");
+        continue_game->setMinimumSize(QSize(111, 41));
+
+        horizontalLayout->addWidget(continue_game);
+
+        load_game = new QPushButton(horizontalLayoutWidget);
+        load_game->setObjectName("load_game");
+        load_game->setMinimumSize(QSize(111, 41));
+
+        horizontalLayout->addWidget(load_game);
+
+        replay = new QPushButton(horizontalLayoutWidget);
+        replay->setObjectName("replay");
+        replay->setMinimumSize(QSize(111, 41));
+
+        horizontalLayout->addWidget(replay);
+
+        quit = new QPushButton(horizontalLayoutWidget);
+        quit->setObjectName("quit");
+        quit->setMinimumSize(QSize(111, 41));
+
+        horizontalLayout->addWidget(quit);
+
 
         retranslateUi(start);
 
@@ -58,11 +86,12 @@ public:
     void retranslateUi(QWidget *start)
     {
         start->setWindowTitle(QCoreApplication::translate("start", "Form", nullptr));
-        replay->setText(QCoreApplication::translate("start", "REPLAY", nullptr));
-        CONTINUE->setText(QCoreApplication::translate("start", "CONTINUE", nullptr));
-        quit->setText(QCoreApplication::translate("start", "QUIT", nullptr));
         label->setText(QCoreApplication::translate("start", "OTHELLO", nullptr));
-        new_game->setText(QCoreApplication::translate("start", "NEW GAME", nullptr));
+        new_game->setText(QCoreApplication::translate("start", "\354\203\210 \352\262\214\354\236\204", nullptr));
+        continue_game->setText(QCoreApplication::translate("start", "\354\235\264\354\226\264\355\225\230\352\270\260", nullptr));
+        load_game->setText(QCoreApplication::translate("start", "\353\266\210\353\237\254\354\230\244\352\270\260", nullptr));
+        replay->setText(QCoreApplication::translate("start", "\353\246\254\355\224\214\353\240\210\354\235\264", nullptr));
+        quit->setText(QCoreApplication::translate("start", "\352\262\214\354\236\204 \354\242\205\353\243\214", nullptr));
     } // retranslateUi
 
 };

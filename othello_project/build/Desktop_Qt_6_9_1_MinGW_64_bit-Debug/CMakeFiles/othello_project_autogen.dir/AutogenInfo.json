@@ -332,6 +332,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/jerom/Documents/othello_project/board_widget.h",
+			"MU",
+			"EWIEGA46WW/moc_board_widget.cpp",
+			null
+		],
+		[
 			"C:/Users/jerom/Documents/othello_project/game_window.h",
 			"MU",
 			"EWIEGA46WW/moc_game_window.cpp",
@@ -344,9 +350,15 @@
 			null
 		],
 		[
-			"C:/Users/jerom/Documents/othello_project/setting_window.h",
+			"C:/Users/jerom/Documents/othello_project/replay_window.h",
 			"MU",
-			"EWIEGA46WW/moc_setting_window.cpp",
+			"EWIEGA46WW/moc_replay_window.cpp",
+			null
+		],
+		[
+			"C:/Users/jerom/Documents/othello_project/setting_dialog.h",
+			"MU",
+			"EWIEGA46WW/moc_setting_dialog.cpp",
 			null
 		],
 		[
@@ -429,6 +441,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/jerom/Documents/othello_project/board_widget.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/jerom/Documents/othello_project/game_window.cpp",
 			"MU",
 			null
@@ -436,7 +453,12 @@
 		[ "C:/Users/jerom/Documents/othello_project/main.cpp", "MU", null ],
 		[ "C:/Users/jerom/Documents/othello_project/mainwindow.cpp", "MU", null ],
 		[
-			"C:/Users/jerom/Documents/othello_project/setting_window.cpp",
+			"C:/Users/jerom/Documents/othello_project/replay_window.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/jerom/Documents/othello_project/setting_dialog.cpp",
 			"MU",
 			null
 		],

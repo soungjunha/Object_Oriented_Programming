@@ -6,6 +6,7 @@ setting_window::setting_window(QWidget *parent)
     , ui(new Ui::setting_window)
 {
     ui->setupUi(this);
+    this->resize(600, 675);
 }
 
 setting_window::~setting_window()

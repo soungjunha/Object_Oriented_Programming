@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1129</width>
-    <height>693</height>
+    <width>900</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,8 @@
     </property>
     <widget class="start" name="page"/>
     <widget class="game_window" name="page_2"/>
-    <widget class="setting_window" name="page_3"/>
+    <widget class="QWidget" name="page_3"/>
+    <widget class="replay_window" name="page_4"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -36,7 +37,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1129</width>
+     <width>900</width>
      <height>22</height>
     </rect>
    </property>
@@ -51,15 +52,15 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>setting_window</class>
-   <extends>QWidget</extends>
-   <header>setting_window.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>start</class>
    <extends>QWidget</extends>
    <header>start.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>replay_window</class>
+   <extends>QWidget</extends>
+   <header>replay_window.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -24,8 +24,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         game_window.h game_window.cpp game_window.ui
-        setting_window.h setting_window.cpp setting_window.ui
+
         start.h start.cpp start.ui
+        replay_window.h replay_window.cpp replay_window.ui
+        setting_dialog.h setting_dialog.cpp setting_dialog.ui
+        board_widget.h board_widget.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET othello_project APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
