@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>start</class>
+ <widget class="QWidget" name="start">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="replay">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>350</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>REPLAY</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CONTINUE">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>350</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CONTINUE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quit">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>350</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>QUIT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>190</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>OTHELLO</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="new_game">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>350</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>NEW GAME</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

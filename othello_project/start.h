@@ -1,0 +1,28 @@
+#ifndef START_H
+#define START_H
+
+#include <QWidget>
+
+namespace Ui {
+class start;
+}
+
+class start : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit start(QWidget *parent = nullptr);
+    ~start();
+
+private slots:
+    void on_new_game_clicked();
+
+private:
+    Ui::start *ui;
+
+signals:
+    void go_to_setting();
+};
+
+#endif // START_H
