@@ -3,5 +3,7 @@
 #include "EWIEGA46WW/moc_game_window.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_replay_window.cpp"
+#include "EWIEGA46WW/moc_result_dialog.cpp"
 #include "EWIEGA46WW/moc_setting_dialog.cpp"
 #include "EWIEGA46WW/moc_start.cpp"
+#include "EWIEGA46WW/moc_turn_indicator_widget.cpp"

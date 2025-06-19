@@ -105,24 +105,12 @@
        <number>10</number>
       </property>
       <item>
-       <widget class="QSlider" name="obstacle_num">
+       <widget class="QSpinBox" name="obstacle_num">
         <property name="maximum">
          <number>16</number>
         </property>
-        <property name="orientation">
-         <enum>Qt::Orientation::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="obstacle_num_label">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
+        <property name="singleStep">
+         <number>2</number>
         </property>
        </widget>
       </item>
@@ -164,6 +152,13 @@
         </property>
         <property name="text">
          <string>백</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="random">
+        <property name="text">
+         <string>무작위</string>
         </property>
        </widget>
       </item>

@@ -13,48 +13,15 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="board_widget" name="widget" native="true">
+  <widget class="board_widget" name="board" native="true">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>651</width>
-     <height>651</height>
+     <width>650</width>
+     <height>650</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>700</x>
-     <y>50</y>
-     <width>101</width>
-     <height>151</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="total_turn">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="black_total_turn">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget_2">
    <property name="geometry">
@@ -67,7 +34,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QPushButton" name="back_turn">
+     <widget class="QPushButton" name="undo">
       <property name="text">
        <string>되돌리기</string>
       </property>
@@ -82,54 +49,48 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="widget_2" native="true">
+  <widget class="turn_indicator_widget" name="turn_indicator" native="true">
    <property name="geometry">
     <rect>
-     <x>780</x>
+     <x>800</x>
      <y>20</y>
      <width>50</width>
      <height>50</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="size">
+  <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>720</x>
-     <y>260</y>
-     <width>48</width>
-     <height>16</height>
+     <x>700</x>
+     <y>50</y>
+     <width>101</width>
+     <height>81</height>
     </rect>
    </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="ob">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>310</y>
-     <width>48</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="fr">
-   <property name="geometry">
-    <rect>
-     <x>790</x>
-     <y>390</y>
-     <width>48</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="total_turn">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="total_black">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="total_white">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <customwidgets>
@@ -137,6 +98,12 @@
    <class>board_widget</class>
    <extends>QWidget</extends>
    <header location="global">board_widget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>turn_indicator_widget</class>
+   <extends>QWidget</extends>
+   <header>turn_indicator_widget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

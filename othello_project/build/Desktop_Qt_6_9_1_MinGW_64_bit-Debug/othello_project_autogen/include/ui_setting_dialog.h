@@ -18,6 +18,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -34,12 +35,12 @@ public:
     QLabel *board_size_label;
     QLabel *label_3;
     QHBoxLayout *horizontalLayout_2;
-    QSlider *obstacle_num;
-    QLabel *obstacle_num_label;
+    QSpinBox *obstacle_num;
     QLabel *label_5;
     QHBoxLayout *horizontalLayout_4;
     QRadioButton *black_player;
     QRadioButton *white_player;
+    QRadioButton *random;
     QDialogButtonBox *buttonBox;
 
     void setupUi(QDialog *setting_dialog)
@@ -94,18 +95,12 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(10, -1, 10, -1);
-        obstacle_num = new QSlider(verticalLayoutWidget);
+        obstacle_num = new QSpinBox(verticalLayoutWidget);
         obstacle_num->setObjectName("obstacle_num");
         obstacle_num->setMaximum(16);
-        obstacle_num->setOrientation(Qt::Orientation::Horizontal);
+        obstacle_num->setSingleStep(2);
 
         horizontalLayout_2->addWidget(obstacle_num);
-
-        obstacle_num_label = new QLabel(verticalLayoutWidget);
-        obstacle_num_label->setObjectName("obstacle_num_label");
-        obstacle_num_label->setFont(font);
-
-        horizontalLayout_2->addWidget(obstacle_num_label);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -131,6 +126,11 @@ public:
 
         horizontalLayout_4->addWidget(white_player);
 
+        random = new QRadioButton(verticalLayoutWidget);
+        random->setObjectName("random");
+
+        horizontalLayout_4->addWidget(random);
+
 
         verticalLayout->addLayout(horizontalLayout_4);
 
@@ -155,10 +155,10 @@ public:
         label->setText(QCoreApplication::translate("setting_dialog", "\353\263\264\353\223\234 \355\201\254\352\270\260", nullptr));
         board_size_label->setText(QCoreApplication::translate("setting_dialog", "TextLabel", nullptr));
         label_3->setText(QCoreApplication::translate("setting_dialog", "\354\236\245\354\225\240\353\254\274 \352\260\234\354\210\230", nullptr));
-        obstacle_num_label->setText(QCoreApplication::translate("setting_dialog", "TextLabel", nullptr));
         label_5->setText(QCoreApplication::translate("setting_dialog", "\354\204\240\352\263\265 \355\224\214\353\240\210\354\235\264\354\226\264", nullptr));
         black_player->setText(QCoreApplication::translate("setting_dialog", "\355\235\221", nullptr));
         white_player->setText(QCoreApplication::translate("setting_dialog", "\353\260\261", nullptr));
+        random->setText(QCoreApplication::translate("setting_dialog", "\353\254\264\354\236\221\354\234\204", nullptr));
     } // retranslateUi
 
 };

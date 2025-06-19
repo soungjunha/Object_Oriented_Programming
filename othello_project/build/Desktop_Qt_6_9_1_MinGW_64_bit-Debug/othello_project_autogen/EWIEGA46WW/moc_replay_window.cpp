@@ -41,7 +41,11 @@ template <> constexpr inline auto replay_window::qt_create_metaobjectdata<qt_met
         "replay_window",
         "go_to_start",
         "",
-        "on_go_to_start_clicked"
+        "on_go_to_start_clicked",
+        "on_prev_clicked",
+        "on_next_clicked",
+        "on_turn_valueChanged",
+        "value"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -49,6 +53,14 @@ template <> constexpr inline auto replay_window::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'on_go_to_start_clicked'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_prev_clicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_next_clicked'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_turn_valueChanged'
+        QtMocHelpers::SlotData<void(int)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 7 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -74,6 +86,9 @@ void replay_window::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         switch (_id) {
         case 0: _t->go_to_start(); break;
         case 1: _t->on_go_to_start_clicked(); break;
+        case 2: _t->on_prev_clicked(); break;
+        case 3: _t->on_next_clicked(); break;
+        case 4: _t->on_turn_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -102,14 +117,14 @@ int replay_window::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 5;
     }
     return _id;
 }

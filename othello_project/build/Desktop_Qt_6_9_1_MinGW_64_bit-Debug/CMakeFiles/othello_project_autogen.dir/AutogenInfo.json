@@ -332,6 +332,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/jerom/Documents/othello_project/board.h",
+			"MU",
+			"EWIEGA46WW/moc_board.cpp",
+			null
+		],
+		[
 			"C:/Users/jerom/Documents/othello_project/board_widget.h",
 			"MU",
 			"EWIEGA46WW/moc_board_widget.cpp",
@@ -356,6 +362,12 @@
 			null
 		],
 		[
+			"C:/Users/jerom/Documents/othello_project/result_dialog.h",
+			"MU",
+			"EWIEGA46WW/moc_result_dialog.cpp",
+			null
+		],
+		[
 			"C:/Users/jerom/Documents/othello_project/setting_dialog.h",
 			"MU",
 			"EWIEGA46WW/moc_setting_dialog.cpp",
@@ -365,6 +377,12 @@
 			"C:/Users/jerom/Documents/othello_project/start.h",
 			"MU",
 			"EWIEGA46WW/moc_start.cpp",
+			null
+		],
+		[
+			"C:/Users/jerom/Documents/othello_project/turn_indicator_widget.h",
+			"MU",
+			"EWIEGA46WW/moc_turn_indicator_widget.cpp",
 			null
 		]
 	],
@@ -440,6 +458,7 @@
 	"SETTINGS_FILE" : "C:/Users/jerom/Documents/othello_project/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/othello_project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/jerom/Documents/othello_project/board.cpp", "MU", null ],
 		[
 			"C:/Users/jerom/Documents/othello_project/board_widget.cpp",
 			"MU",
@@ -458,11 +477,21 @@
 			null
 		],
 		[
+			"C:/Users/jerom/Documents/othello_project/result_dialog.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/jerom/Documents/othello_project/setting_dialog.cpp",
 			"MU",
 			null
 		],
-		[ "C:/Users/jerom/Documents/othello_project/start.cpp", "MU", null ]
+		[ "C:/Users/jerom/Documents/othello_project/start.cpp", "MU", null ],
+		[
+			"C:/Users/jerom/Documents/othello_project/turn_indicator_widget.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

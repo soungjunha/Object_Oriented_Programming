@@ -38,10 +38,29 @@ template <> constexpr inline auto board_widget::qt_create_metaobjectdata<qt_meta
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "board_widget"
+        "board_widget",
+        "turn_changed",
+        "",
+        "is_black_turn",
+        "game_finished",
+        "result",
+        "turn_passed",
+        "skipped_player"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'turn_changed'
+        QtMocHelpers::SignalData<void(bool)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Bool, 3 },
+        }}),
+        // Signal 'game_finished'
+        QtMocHelpers::SignalData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 5 },
+        }}),
+        // Signal 'turn_passed'
+        QtMocHelpers::SignalData<void(bool)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Bool, 7 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -63,10 +82,22 @@ Q_CONSTINIT const QMetaObject board_widget::staticMetaObject = { {
 void board_widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<board_widget *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->turn_changed((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 1: _t->game_finished((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->turn_passed((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (board_widget::*)(bool )>(_a, &board_widget::turn_changed, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (board_widget::*)(const QString & )>(_a, &board_widget::game_finished, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (board_widget::*)(bool )>(_a, &board_widget::turn_passed, 2))
+            return;
+    }
 }
 
 const QMetaObject *board_widget::metaObject() const
@@ -85,6 +116,36 @@ void *board_widget::qt_metacast(const char *_clname)
 int board_widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 3;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void board_widget::turn_changed(bool _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void board_widget::game_finished(const QString & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
+}
+
+// SIGNAL 2
+void board_widget::turn_passed(bool _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1);
 }
 QT_WARNING_POP

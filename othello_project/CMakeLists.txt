@@ -29,6 +29,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         replay_window.h replay_window.cpp replay_window.ui
         setting_dialog.h setting_dialog.cpp setting_dialog.ui
         board_widget.h board_widget.cpp
+        board.h board.cpp
+        turn_indicator_widget.h turn_indicator_widget.cpp
+        result_dialog.h result_dialog.cpp result_dialog.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET othello_project APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
